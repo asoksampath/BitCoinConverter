@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accview": [
+                "accview/accview.js"
+            ],
+            "c/bitCoinConverter": [
+                "bitCoinConverter/bitCoinConverter.js"
+            ],
+            "c/createAccount": [
+                "createAccount/createAccount.js"
+            ],
+            "c/helloWorld": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/myFirstWebComponent": [
+                "myFirstWebComponent/myFirstWebComponent.js"
+            ],
+            "c/retrievePNR": [
+                "retrievePNR/retrievePNR.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+<template>
+    <lightning-card icon-name="standard:search" title="PNR Retreival">
+        <div>
+            <lightning-input type="text" name="input1" label="Enter Last Name" value={lastName}></lightning-input>
+        </div>
+        
+        <div>
+            <lightning-input type="text" name="input2" label="Enter Valid PNR" value={pnr}></lightning-input>
+        </div>
+        
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <!-- Generate random content when clicked -->
+            <lightning-button label="Retrieve PNR" title="Retrieve PNR Information"  onclick={handleRandomClick} class="slds-m-left_x-small"></lightning-button>         
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <th scope="col">
+                        <div>Passenger Name</div>
+                    </th>
+                </tr>
+                <template for:each={passengerName} for:item="d">
+                    <tr key={d.key}>
+                        <th scope="col">
+                            <div title="value">{d.key}</div>
+                        </th>
+                    </tr>
+                </template>
+            </table>
+            
+        </div>
+
+    </lightning-card>
+</template>

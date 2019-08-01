@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>BTC</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BTC</shortDescription>
+        <value>BTC-Bitcoin</value>
+    </labels>
+    <labels>
+        <fullName>BitCoinAPIURL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BitCoinAPIURL</shortDescription>
+        <value>https://bitpay.com/api/rates/</value>
+    </labels>
+    <labels>
+        <fullName>Default_BTC_Value</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Default_BTC_Value</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Default_Other_Value</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Default_Other_Value</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>USD</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>USD</shortDescription>
+        <value>USD-US Dollar</value>
+    </labels>
+</CustomLabels>

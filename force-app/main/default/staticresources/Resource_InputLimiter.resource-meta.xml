@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/javascript</contentType>
+    <description>This JS is used to prohibit the users from entering invalid input. for ex) a field of Number type will accept only numbers</description>
+</StaticResource>

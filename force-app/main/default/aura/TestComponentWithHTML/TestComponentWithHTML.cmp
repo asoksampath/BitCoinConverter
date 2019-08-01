@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId">
+    Hello World
+    <P>Hello World in paragraph</P>
+    <p><lightning:formattedText value="Hello World in lightning"/></p>
+	<p><lightning:formattedText linkify="true" value="I like to email info@salesforce.com" /></p>
+</aura:component>

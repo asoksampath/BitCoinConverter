@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="My Web Component Practice Area" icon-name="custom:custom63">
+        <div class="slds-col slds-size_1-of-2">
+            <p>Hello, {greeting}!</p>
+            <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+            <lightning-button ></lightning-button>
+        </div>
+    </lightning-card>
+    <div class="slds-box">
+        <!-- Record view Form -->
+        <lightning-record-view-form record-id={recordId}
+                                    object-api-name="Account"
+                                    density="compact">
+            <p>Record View Form, </p>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-output-field field-name="BillingStreet"></lightning-output-field>  
+                    <lightning-output-field field-name="BillingState"></lightning-output-field>
+                </div>                          
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-output-field field-name="BillingCity"></lightning-output-field>
+                    <lightning-output-field field-name="BillingCountry"></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </div>
+    <br/>
+    <div class="slds-p-horizontal_small slds-box">
+        <!-- Record Edit Form -->
+        <lightning-record-edit-form record-id={recordId}
+                                    object-api-name="Account"
+                                    density="compact"  onsuccess={showNotification}>
+            <p>Record edit form, </p>
+            <div class="slds-grid" >
+                <lightning-input-field field-name="BillingStreet"></lightning-input-field>  
+                <lightning-input-field field-name="BillingState"></lightning-input-field>
+            </div>                          
+            <div class="slds-grid">
+                <lightning-input-field field-name="BillingCity"></lightning-input-field>
+                <lightning-input-field field-name="BillingCountry"></lightning-input-field>
+            </div>
+            <div class="slds-grid">
+                    <lightning-input-field field-name="ParentId"></lightning-input-field>
+                    <lightning-input-field field-name="Rating"></lightning-input-field>
+            </div>
+            <div>
+                <lightning-button class="slds-align_absolute-center" variant="brand" type="submit" label="Update Account"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </div>
+    <br/>
+    <div class="slds-box">
+        <template if:true={account.data}>
+        <p>Wire Function </p>
+            <div class="slds-col slds-size_1-of-4">
+                Test this property - {name}
+            </div>  
+        </template>        
+    </div>
+</template>

@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Bit Coin Converter" icon-name="custom:custom63">
+        <div class="slds-grid slds-wrap">    
+            <div class="slds-col slds-size_1-of-2">
+                Bit Coin          {label.BTC}
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input label="Bit Coin Value" value={BitCoinValue} onchange={handleKeyPress} type="number" min="0"></lightning-input>
+            </div>               
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-combobox name="currency"
+                                    label="Select Currency"
+                                    value={value}
+                                    placeholder="-Select-"
+                                    options={currValueOptions}
+                                    onchange={handleChange}
+                                    >
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input label="Currency Value" value={otherValue} type="number" disabled></lightning-input>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>
+                    
