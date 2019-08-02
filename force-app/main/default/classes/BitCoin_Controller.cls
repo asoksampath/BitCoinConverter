@@ -100,9 +100,12 @@ public class BitCoin_Controller
     * Purpose: Wrapper class to hold the data from the response
     ----------------------------------------------------------------------- */ 
     public class BitCoinWrapperClass
-    {
+    {   
+        @AuraEnabled
         public String rate;
+        @AuraEnabled
         public String name;
+        @AuraEnabled
         public String code;
         
         public BitCoinWrapperClass(string rate, string name, string code)

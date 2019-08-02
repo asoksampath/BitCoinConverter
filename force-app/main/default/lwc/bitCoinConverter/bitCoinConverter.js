@@ -4,8 +4,9 @@ import BTC from '@salesforce/label/c.BTC';
 import Default_BTC_Value from '@salesforce/label/c.Default_BTC_Value';
 import Default_Other_Value from '@salesforce/label/c.Default_Other_Value';
 import USD from '@salesforce/label/c.USD';
-import getMapOfData from '@salesforce/apex/BitCoin_Controller.currList';
+//import getMapOfData from '@salesforce/apex/BitCoin_Controller.currList';
 import getCurrValue from '@salesforce/apex/BitCoin_Controller.calculateOtherValue';
+import BitCoinConversion from '@salesforce/apex/BitCoin_Controller.bitCoinConversion';
 
 let i=0;
 export default class BitCoinConverter extends LightningElement {
@@ -19,17 +20,30 @@ export default class BitCoinConverter extends LightningElement {
 
    
     @track items = []; //this will hold key, value pair
+    @track listitems =[];
     @track value = ''; //initialize combo box value
 
     @track BitCoinValue = 1;
     @track otherValue = 0;
     selectedOption;
 
+    @wire(BitCoinConversion)
+    coversionValue({data, error}){
+        if(data){
+            for(i=0; i<data.length; i++) 
+            {  
+                this.listitems = [...this.listitems,{value: data[i].code , label: data[i].code + '-' +data[i].name} ]; 
+            }
+            this.error = undefined;
+        }
+        else if(error){
+            this.error = error;
+        }
+    }
+    /*
     @wire(getMapOfData)
     mapOfData({data, error}) {
         if(data) {
-            //create array with elements which has been retrieved controller
-            //here value will be Id and label of combobox will be Name
             for(i=0; i<data.length; i++) 
             {  
                 this.items = [...this.items,{value: data[i] , label: data[i]} ]; 
@@ -40,10 +54,10 @@ export default class BitCoinConverter extends LightningElement {
             this.error = error;
         }
     }
-
+    */
     //gettter to return items which is mapped with options attribute
     get currValueOptions() {
-        return this.items;
+        return this.listitems;
     }
 
     //To calculate while the currency code changes
@@ -74,4 +88,6 @@ export default class BitCoinConverter extends LightningElement {
             this.error = error;
         }); 
     }
+
+    
 }
