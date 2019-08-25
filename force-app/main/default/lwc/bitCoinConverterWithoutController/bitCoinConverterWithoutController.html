@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Bit Coin Converter without Controller" icon-name="custom:custom63">
+    <div class="slds-grid slds-wrap">    
+            <div class="slds-col slds-size_1-of-2">
+                Bit Coin            {label.BTC}
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input label="Bit Coin Value" value={BitCoinValue} type="number" min="0"></lightning-input>
+            </div> 
+            <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox name="currency"
+                                        label="Select Currency"
+                                        value={value}
+                                        placeholder="-Select-"
+                                        options={currencyList}
+                                        onchange={handleChange}
+                    >
+                    </lightning-combobox>
+            </div>      
+            
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input label="Currency Value" value={otherValue} type="number" disabled></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-combobox name="text"
+                                    label="Select Year"
+                                    value={value}
+                                    placeholder={selectedYear}
+                                    options={yearsList}
+                                    onchange={handleYearChange}
+                >
+                </lightning-combobox>
+            </div> 
+            <div>
+                <lightning-combobox name="progress"
+                                    label="Status"
+                                    value={value}
+                                    placeholder="Select Progress"
+                                    options={options} >
+                </lightning-combobox>
+            </div>
+
+        </div>        
+    </lightning-card>
+</template>

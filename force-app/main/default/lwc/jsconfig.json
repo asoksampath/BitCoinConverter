@@ -9,6 +9,9 @@
             "c/bitCoinConverter": [
                 "bitCoinConverter/bitCoinConverter.js"
             ],
+            "c/bitCoinConverterWithoutController": [
+                "bitCoinConverterWithoutController/bitCoinConverterWithoutController.js"
+            ],
             "c/createAccount": [
                 "createAccount/createAccount.js"
             ],

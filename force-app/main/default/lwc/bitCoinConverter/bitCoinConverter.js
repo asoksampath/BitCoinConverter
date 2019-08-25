@@ -19,7 +19,6 @@ export default class BitCoinConverter extends LightningElement {
     };
 
    
-    @track items = []; //this will hold key, value pair
     @track listitems =[];
     @track value = ''; //initialize combo box value
 
@@ -40,21 +39,7 @@ export default class BitCoinConverter extends LightningElement {
             this.error = error;
         }
     }
-    /*
-    @wire(getMapOfData)
-    mapOfData({data, error}) {
-        if(data) {
-            for(i=0; i<data.length; i++) 
-            {  
-                this.items = [...this.items,{value: data[i] , label: data[i]} ]; 
-            }
-            this.error = undefined;
-        }
-        else if(error) {
-            this.error = error;
-        }
-    }
-    */
+
     //gettter to return items which is mapped with options attribute
     get currValueOptions() {
         return this.listitems;
