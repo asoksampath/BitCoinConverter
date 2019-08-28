@@ -193,6 +193,7 @@ public class BitCoin_Controller
     * Return:  None
     * Purpose: Method to create the records for reporting
     ----------------------------------------------------------------------- */ 
+    @AuraEnabled
     public static void createRecordForComparison(Decimal bitCoinValue, String otherCurrency, Decimal otherCurrencyValue, String rep)
     {
         Bit_Coin_Comparison__c comp = new Bit_Coin_Comparison__c();

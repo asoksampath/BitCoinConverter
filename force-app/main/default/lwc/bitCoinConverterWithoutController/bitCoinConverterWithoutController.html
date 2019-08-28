@@ -5,23 +5,23 @@
                 Bit Coin            {label.BTC}
             </div>
             <div class="slds-col slds-size_1-of-2">
-                <lightning-input label="Bit Coin Value" value={BitCoinValue} type="number" min="0"></lightning-input>
+                <lightning-input label="Bit Coin Value" value={BitCoinValue} onchange={handleCurrencyValue} type="number" min="0" step="any" required></lightning-input>
             </div> 
             <div class="slds-col slds-size_1-of-2">
                     <lightning-combobox name="currency"
                                         label="Select Currency"
                                         value={value}
-                                        placeholder="-Select-"
                                         options={currencyList}
                                         onchange={handleChange}
+                                        required
                     >
                     </lightning-combobox>
             </div>      
             
             <div class="slds-col slds-size_1-of-2">
-                <lightning-input label="Currency Value" value={otherValue} type="number" disabled></lightning-input>
+                <lightning-input label="Currency Value" value={otherValue} type="number" onchange={handleBitCoinValue} step="any" required></lightning-input>
             </div>
-
+            <!--
             <div class="slds-col slds-size_1-of-2">
                 <lightning-combobox name="text"
                                     label="Select Year"
@@ -40,7 +40,7 @@
                                     options={options} >
                 </lightning-combobox>
             </div>
-
+            -->
         </div>        
     </lightning-card>
 </template>
