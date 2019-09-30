@@ -23,6 +23,9 @@
             ],
             "c/retrievePNR": [
                 "retrievePNR/retrievePNR.js"
+            ],
+            "c/showAccount": [
+                "showAccount/showAccount.js"
             ]
         }
     },
